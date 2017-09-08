@@ -1,6 +1,7 @@
 ![Demo result](https://raw.githubusercontent.com/peiyunh/tiny/master/selfie.png)
 
 # Finding Tiny Faces
+Revised by Xu Tang.
 By Peiyun Hu and Deva Ramanan at Carnegie Mellon University. 
 
 ## Introduction
@@ -33,6 +34,8 @@ Compile MatConvNet by running following commands in MATLAB (see [Installing - M
 >> addpath matlab/; 
 >> vl_compilenn('enableImreadJpeg', true, 'enableGpu', true, 'cudaRoot', [cuda_dir],...
                 'cudaMethod', 'nvcc', 'enableCudnn', true, 'cudnnRoot', [cudnn_dir]);
+
+>> vl_compilenn('enableImreadJpeg', true,'enableGpu', true,'enableGpu', true, 'cudaRoot', '/usr/local/cuda', 'enableCudnn', true,'cudaMethod', 'nvcc','cudnnRoot','/home/work/cudnn/cudnn_v5/cuda');            
 >> vl_testnn('gpu', true);  % vl_testnn('gpu', false) for cpu-only 
 ```
 
